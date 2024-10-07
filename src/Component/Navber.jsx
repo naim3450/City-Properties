@@ -9,11 +9,11 @@ const Navber = () => {
 
     return (
         <div>
-            <Container className={`py-[30px]`}>
+            <Container className={`py-[30px] flex items-center justify-between`}>
                 <img src={logo} alt="" />
 
-                <div className="">
-                    <ul>
+                <div className="w-[715px] items-center flex justify-between">
+                    <ul className='flex gap-10'>
                         {
                             menu.map((el, idx) => {
                                 return (
@@ -22,6 +22,10 @@ const Navber = () => {
                             })
                         }
                     </ul>
+
+                    <button className='text-[#FFFF] text-base w-[150px] h-[56px] bg-blue font-Nunito font-bold rounded-[30px]'>
+                        Log In
+                    </button>
                 </div>
             </Container>
         </div>
