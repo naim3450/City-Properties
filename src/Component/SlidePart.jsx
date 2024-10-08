@@ -11,14 +11,15 @@ const SlidePart = () => {
     return (
         <div>
             <Container>
-                <h1 className='text-[#292929] text-[25px] font-bold text-center'>Don’t worry to Fail. We have Experienced with Big Company’s</h1>
+                <h1 className='text-[#292929] text-[25px] font-bold text-center'>
+                    Don’t worry to Fail. We have Experienced with Big Company’s</h1>
                 <div className="flex mt-[40px]">
-                    <img src={item} alt="" />
-                    <img src={item2} alt="" />
-                    <img src={item3} alt="" />
-                    <img src={item4} alt="" />
-                    <img src={item5} alt="" />
-                    <img src={item6} alt="" />
+                    <img src={item} />
+                    <img src={item2} />
+                    <img src={item3} />
+                    <img src={item4} />
+                    <img src={item5} />
+                    <img src={item6} />
                 </div>
             </Container>
         </div>
