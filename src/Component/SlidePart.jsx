@@ -11,7 +11,7 @@ const SlidePart = () => {
     return (
         <div>
             <Container>
-                <h1 className='text-[#292929] text-[25px] font-bold text-center'>Don’t worry to Fail. We have Experienced with Big Company’s</h1>
+                <h1 className='text-[#292929] text-[25px] font-bold text-center'>Don’t worry to Fail. We have Experienced with Big Company’s </h1>
                 <div className="flex mt-[40px]">
                     <img src={item} alt="" />
                     <img src={item2} alt="" />
