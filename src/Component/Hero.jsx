@@ -34,7 +34,6 @@ const Hero = () => {
     return (
         <div className='h-[100vh] overflow-hidden'>
             <Container>
-
                 <div className="flex">
                     <div className="">
                         <Title text={`Best Real #Estate Advice# #for Your Homey#`} className={`text-[50px] leading-[65px] mt-[50px]`} />

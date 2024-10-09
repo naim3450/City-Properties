@@ -8,14 +8,14 @@ const Properties = () => {
       <Container>
         {/* heading */}
         <div>
-          <h5 className="font-NunitoSans font-bold text-secondaryColor text-base uppercase">
+          <h5 className="font-Nunito font-bold text-secondaryColor text-base uppercase">
             properties
           </h5>
-          <h3 className="font-NunitoSans font-bold text-primaryColor text-[40px]">
+          <h3 className="font-Nunito font-bold text-primaryColor text-[40px]">
             Our Latest Properties
           </h3>
           <p
-            className="font-NunitoSans text-base font-normal
+            className="font-Nunito text-base font-normal
            text-thirdColor max-w-[529px]"
           >
             We are very proud of the service we provide. See what our guests
@@ -29,7 +29,7 @@ const Properties = () => {
               (item, index) => (
                 <li key={index}>
                   <a
-                    className="font-NunitoSans hover:text-secondaryColor transition-all font-bold text-xl text-primaryColor capitalize"
+                    className="font-Nunito hover:text-secondaryColor transition-all font-bold text-xl text-primaryColor capitalize"
                     href="#"
                   >
                     {item}

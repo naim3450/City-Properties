@@ -19,17 +19,17 @@ const Card = () => {
 
       <div className="flex items-center gap-x-[10px] mt-5">
         <img src={locationIcon} alt="" />
-        <span className="text-base font-NunitoSans text-thirdColor font-normal">
+        <span className="text-base font-Nunito text-thirdColor font-normal">
           Ranch Triangle , Chicago
         </span>
       </div>
-      <h3 className="text-2xl font-NunitoSans font-bold text-primaryColor py-2">
+      <h3 className="text-2xl font-Nunito font-bold text-primaryColor py-2">
         Beautiful home for sale in chicago
       </h3>
-      <h5 className="font-NunitoSans font-bold text-2xl text-secondaryColor pb-3">
+      <h5 className="font-Nunito font-bold text-2xl text-secondaryColor pb-3">
         $1,500,000
       </h5>
-      <p className="font-NunitoSans font-normal text-base text-thirdColor">
+      <p className="font-Nunito font-normal text-base text-thirdColor">
         Beautiful, updated, ground level co-oprative apartment in the desirable
         Bay Terrace neighborhood ...
         <span className="font-bold text-secondaryColor max-w-[300px] cursor-pointer">
@@ -40,23 +40,23 @@ const Card = () => {
       <div className="pt-3 pb-5 flex items-center justify-between">
         <div className="flex items-center gap-x-1">
           <img src={bed} alt="" />
-          <span className="font-NunitoSans font-normal text-balance text-thirdColor">
+          <span className="font-Nunito font-normal text-balance text-thirdColor">
             5
           </span>
         </div>
         <div className="flex items-center gap-x-1">
           <img src={ft} alt="" />
-          <span className="font-NunitoSans font-normal text-balance text-thirdColor">
+          <span className="font-Nunito font-normal text-balance text-thirdColor">
             3
           </span>
         </div>
         <div className="flex items-center gap-x-1">
           <img src={bath} alt="" />
-          <span className="font-NunitoSans font-normal text-balance text-thirdColor">
+          <span className="font-Nunito font-normal text-balance text-thirdColor">
             250.00 ft
           </span>
         </div>
-        <button className="font-NunitoSans font-normal text-base text-white  bg-secondaryColor py-[2px] px-2 rounded-md">
+        <button className="font-Nunito font-normal text-base text-white  bg-secondaryColor py-[2px] px-2 rounded-md">
           Details
         </button>
       </div>
@@ -64,7 +64,7 @@ const Card = () => {
       <div className="flex items-center justify-between pt-7 border-t-2">
         <div className="flex items-center gap-x-2">
           <img src={userImg} alt="" />
-          <h5 className="font-NunitoSans font-bold text-base text-primaryColor">
+          <h5 className="font-Nunito font-bold text-base text-primaryColor">
             Maria Barlow
           </h5>
         </div>
