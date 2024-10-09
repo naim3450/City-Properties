@@ -11,6 +11,9 @@ import LPM from './LPM'
 import Property from '../../Property.json'
 import Price from '../../Price.json'
 import Country from '../../Country.json'
+import { RiArrowDownSLine } from "react-icons/ri";
+import { RiArrowUpSLine } from "react-icons/ri";
+
 
 
 const Hero = () => {
@@ -29,7 +32,7 @@ const Hero = () => {
     ]
 
     return (
-        <div className='relative h-[86.5vh] overflow-hidden'>
+        <div className='h-[100vh] overflow-hidden'>
             <Container>
 
                 <div className="flex">
@@ -40,11 +43,11 @@ const Hero = () => {
                     </div>
 
                     <div className="">
-                        <img src={Ellipse1} className='absolute left-[1300px] bottom-[80px] w-[300px] h-[300px]' alt="" />
-                        <img src={Ellipse2} className='absolute left-[1520px] top-[230px] w-[150px] h-[150px]' alt="" />
-                        <img src={Ellipse3} className='absolute left-[1100px] top-0 w-[400px] h-[400px]' alt="" />
-                        <img src={Ellipse4} className='absolute left-[1620px] bottom-[220px] w-[220px] h-[220px]' alt="" />
-                        <img src={Ellipse5} className='absolute left-[1700px] top-[50px] w-[300px] h-[300px]' alt="" />
+                        <img src={Ellipse1} className='absolute left-[1200px] bottom-[80px] w-[300px] h-[300px]' alt="" />
+                        <img src={Ellipse2} className='absolute left-[1400px] top-[390px] w-[150px] h-[150px]' alt="" />
+                        <img src={Ellipse3} className='absolute left-[1000px] top-[110px] w-[400px] h-[400px]' alt="" />
+                        <img src={Ellipse4} className='absolute left-[1550px] bottom-[210px] w-[220px] h-[220px]' alt="" />
+                        <img src={Ellipse5} className='absolute left-[1500px] top-[150px] w-[300px] h-[300px]' alt="" />
                     </div>
                 </div>
 
@@ -61,13 +64,15 @@ const Hero = () => {
                     }
                 </div>
 
-                {
-                    obj.map((item, idx) => {
-                        return (
-                            <LPM key={idx} item={item} />
-                        )
-                    })
-                }
+                <div>
+                    {
+                        obj.map((item, idx) => {
+                            return (
+                                <LPM key={idx} item={item} />
+                            )
+                        })
+                    }
+                </div>
             </Container>
         </div >
     )

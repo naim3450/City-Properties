@@ -1,10 +1,11 @@
 import React from "react";
 import Card from "../Common/Card";
+import Container from "./Container";
 
 const Properties = () => {
   return (
     <div className="py-[100px]">
-      <div className="container">
+      <Container>
         {/* heading */}
         <div>
           <h5 className="font-NunitoSans font-bold text-secondaryColor text-base uppercase">
@@ -47,7 +48,7 @@ const Properties = () => {
           <Card />
           <Card />
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

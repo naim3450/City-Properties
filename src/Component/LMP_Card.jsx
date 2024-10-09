@@ -16,8 +16,7 @@ const LMP_Card = ({ lmpdata, loadName, title }) => {
     return (
         <div className="">
 
-            <div className="w-[210px] flex items-center justify-between ">
-
+            <div className="w-[210px] flex items-center justify-between">
                 <div className="w-full pl-[30px]">
                     <h3 onClick={() => setfirst(!first)} className='text-title font-bold text-[20px] outline-none cursor-pointer flex items-center'>
                         {title} {first ? <RiArrowUpSLine className='ml-[1vh]' /> : <RiArrowDownSLine className='ml-[1vh]' />}
@@ -33,12 +32,12 @@ const LMP_Card = ({ lmpdata, loadName, title }) => {
             {
                 first ?
                     <div className="parent">
-                        <div className="clhid h-[77.5%] w-[7vw] z-10 overflow-auto overflow-x-hidden bg-white border-[1px] border-gray-400 rounded-md  fixed top-[5vh] ml-[2.5vh]">
+                        <div className="clhid h-[15vw] w-[208px] overflow-auto overflow-x-hidden bg-white border-[1px] border-gray-400 rounded-md absolute top-[715px] inline-block shadow-xl py-[10px]">
 
                             {
                                 lmpdata.map((item, idx) => {
                                     return (
-                                        <li key={idx} onClick={() => liClick(item.name || item)} className='list-none pl-[0.5vw] hover:bg-gray-400 cursor-pointer'>
+                                        <li key={idx} onClick={() => liClick(item.name || item)} className='py-[8px] font-Nunito pl-[30px] list-none border-b-[2px] border-blue border-opacity-[40%] cursor-pointer'>
                                             {item.name || item}
                                         </li>
                                     )

@@ -17,7 +17,17 @@ option::marker {
     height: 73px;
     width: 1px;
 }
-/* 
-::-webkit-scrollbar{
-    display: none;
-} */
+
+body {
+    overflow-x: hidden;
+}
+
+.clhid::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+
+.clhid::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}

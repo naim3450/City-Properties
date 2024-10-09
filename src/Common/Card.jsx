@@ -1,12 +1,12 @@
 import React from "react";
-import img from "../assets/Image/main.png";
-import locationIcon from ".../assets/Image/main.png";
-import bed from "../../assets/bed.png";
-import ft from "../../assets/ft.png";
-import bath from "../../assets/bath.png";
+import img from "../assets/Image/1.png";
+import locationIcon from "../assets/Image/location.png";
+import bed from "../assets/Image/bed.png";
+import ft from "../assets/Image/ft.png";
+import bath from "../assets/Image/bath.png";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import userImg from "../../assets/user.png";
+import userImg from "../assets/Image/user.png";
 
 const Card = () => {
   return (
