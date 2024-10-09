@@ -6,7 +6,7 @@ import AboutUs from '../Component/AboutUs'
 import WorkPart from '../Component/WorkPart'
 import HappyClint from '../Component/HappyClint'
 import Footer from '../Component/Footer'
-import CounterUp from '../Component/CounterUp'
+import Properties from '../Component/Properties'
 
 const Home = () => {
     return (
@@ -15,12 +15,12 @@ const Home = () => {
             <Hero />
             <SlidePart />
             <AboutUs />
+            <Properties />
             <WorkPart />
             <HappyClint />
-            <CounterUp />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
 
-export default Home
+export default Home;
