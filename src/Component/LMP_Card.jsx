@@ -11,11 +11,11 @@ const LMP_Card = ({ lmpdata, loadName, title }) => {
     const liClick = (name) => {
         setcntName(name)
         setfirst(false)
+        console.log(name);
     }
 
     return (
         <div className="">
-
             <div className="w-[210px] flex items-center justify-between">
                 <div className="w-full pl-[30px]">
                     <h3 onClick={() => setfirst(!first)} className='text-title font-bold text-[20px] outline-none cursor-pointer flex items-center'>
@@ -26,18 +26,18 @@ const LMP_Card = ({ lmpdata, loadName, title }) => {
                         {cntName}
                     </h4>
                 </div>
-                <span className='h-[73px] w-[2px] bg-blue roc'></span>
+                <span className='h-[73px] w-[2px] bg-blue spanLine'></span>
             </div>
 
             {
                 first ?
                     <div className="parent">
-                        <div className="clhid h-[15vw] w-[208px] overflow-auto overflow-x-hidden bg-white border-[1px] border-gray-400 rounded-md absolute top-[715px] inline-block shadow-xl py-[10px]">
+                        <div className="clhid h-[15vw] w-[208px] overflow-auto overflow-x-hidden bg-white border-[1px] border-gray-400 rounded-md absolute top-[100px] inline-block shadow-xl py-[10px]">
 
                             {
                                 lmpdata.map((item, idx) => {
                                     return (
-                                        <li key={idx} onClick={() => liClick(item.name || item)} className='py-[8px] font-Nunito pl-[30px] list-none border-b-[2px] border-blue border-opacity-[40%] cursor-pointer'>
+                                        <li key={idx} onClick={() => liClick(item.name || item)} className='py-[8px] font-Nunito pl-[30px] list-none border-b-[2px] border-blue border-opacity-[40%] cursor-pointer hover:bg-gray-400'>
                                             {item.name || item}
                                         </li>
                                     )

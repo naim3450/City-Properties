@@ -7,13 +7,13 @@ option::marker {
     content: '';
 }
 
-.roc {
+.spanLine {
     position: relative;
 }
 
-.roc::before {
+.spanLine::before {
     position: absolute;
-    content: '.';
+    content: '';
     height: 73px;
     width: 1px;
 }
@@ -30,4 +30,8 @@ body {
 .clhid::-webkit-scrollbar-thumb {
     background: gray;
     border-radius: 10px;
+}
+
+.insetShadow {
+    box-shadow: inset -5px 2px 10px rgb(163, 163, 163);
 }

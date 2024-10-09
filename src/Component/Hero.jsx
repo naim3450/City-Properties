@@ -50,7 +50,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="w-[381px] h-[70px] mt-[90px] flex justify-between">
+                <div className="w-[381px] h-[70px] mt-[80px] flex justify-between">
                     {
                         btnList.map((item, idx) => {
                             return (
@@ -63,7 +63,7 @@ const Hero = () => {
                     }
                 </div>
 
-                <div>
+                <div className='w-[825px] h-[435px] overflow-hidden'>
                     {
                         obj.map((item, idx) => {
                             return (

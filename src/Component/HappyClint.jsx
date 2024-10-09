@@ -14,7 +14,9 @@ const HappyClint = () => {
     return (
         <section className='bg-[#f6f7fe] py-[200px]'>
             <Container>
-                <h3 className='font-Nunito text-[40px] leading-10 text-title font-bold text-center pt-20'>Our Happy Client Says</h3>
+                <h3 className='font-Nunito text-[40px] leading-10 text-title font-bold text-center pt-20'>
+                    Our Happy Client Says
+                </h3>
 
                 <div className="flex justify-around mt-20">
                     <div className="">
