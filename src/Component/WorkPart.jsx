@@ -10,11 +10,11 @@ import WorkCardTwo from './WorkCardTwo'
 
 const WorkPart = () => {
    return (
-      <section className='py-20 bg-[#f6f7fe]'>
+      <section className='py-20 bg-[#f6f7fe] mt-[150px]'>
          <Container>
             <div className="flex gap-x-24">
                <div className="">
-                  <h3 className='font-bold font-Nunito  text-[40px] w-[410px]'>Do you want to know, font</h3>
+                  <h3 className='font-bold font-Nunito  text-[40px] w-[410px]'>Do you want to know, How Us Work?</h3>
 
                </div>
                <div className="">
@@ -44,12 +44,12 @@ const WorkPart = () => {
                />
             </div>
 
-            
+
          </Container>
-        {/* 2nd part start here */}
-        <div className="bg-white py-28 mt-32">
-              <Container className={`flex gap-10`}>
-              <div className="">
+         {/* 2nd part start here */}
+         <div className="bg-white py-28 mt-32">
+            <Container className={`flex gap-10`}>
+               <div className="">
                   <WorkCardTwo
                      src={Work_four}
                      ptext={`We give you thousand recommendations of Apartment, House also Hotel that can make your life become easier than before. Let’s search what you want below. Cheerio guys.`}
@@ -64,9 +64,9 @@ const WorkPart = () => {
                   />
                </div>
 
-              </Container>
-            </div>
-            {/* 2nd part end here */}
+            </Container>
+         </div>
+         {/* 2nd part end here */}
 
       </section>
    )

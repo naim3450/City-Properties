@@ -6,6 +6,7 @@ import AboutUs from '../Component/AboutUs'
 import WorkPart from '../Component/WorkPart'
 import HappyClint from '../Component/HappyClint'
 import Footer from '../Component/Footer'
+import CounterUp from '../Component/CounterUp'
 
 const Home = () => {
     return (
@@ -16,7 +17,8 @@ const Home = () => {
             <AboutUs />
             <WorkPart />
             <HappyClint />
-            <Footer />
+            <CounterUp />
+            {/* <Footer /> */}
         </div>
     )
 }
