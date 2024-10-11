@@ -19,21 +19,19 @@ const SlidePart = () => {
         speed: 1000,
         autoplaySpeed: 500,
         cssEase: "linear"
-      };
+    };
     return (
         <div className='py-[15px]'>
             <Container>
                 <h1 className='text-[#292929] text-[25px] font-bold text-center pb-8'>
                     Don’t worry to Fail. We have Experienced with Big Company’s</h1>
-                    <Slider {...settings}>
+                <Slider {...settings}>
                     <img src={item} />
                     <img src={item2} />
                     <img src={item3} />
                     <img src={item4} />
                     <img src={item5} />
                     <img src={item6} />
-
-
                 </Slider>
             </Container>
         </div>
