@@ -24,7 +24,7 @@ const LPM = ({ item }) => {
             })
 
             gsap.to('.searchBar', {
-                x: "0%",
+                x: "5%",
                 opacity: 1,
                 scale: 1,
             })
@@ -46,7 +46,7 @@ const LPM = ({ item }) => {
     }
 
     return (
-        <div className="w-[825px] h-[130px] shadow-md rounded-xl flex items-center relative ">
+        <div className="w-[825px] h-[130px] rounded-xl flex items-center relative ">
 
             <input type="text" placeholder='Search........' className='outline-none w-[630px] px-[1.5vw] py-[1vh] text-[20px] font-Nunito font-medium italic rounded-xl insetShadow searchBar translate-x-[-100%] opacity-0 absolute' />
 
