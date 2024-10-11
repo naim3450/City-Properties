@@ -57,7 +57,7 @@ const LPM = ({ item }) => {
             </div>
 
             <div onClick={clickIcon}
-                className="w-[82px] h-[82px] translate-x-[720px] bg-blue flex items-center justify-center rounded-md">
+                className="w-[82px] h-[82px] translate-x-[720px] bg-blue flex items-center justify-center rounded-md cursor-pointer">
                 <CiSearch className='text-white text-[24px] font-bold font-Nunito' />
             </div>
 
