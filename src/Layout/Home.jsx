@@ -12,7 +12,6 @@ import CounterUp from '../Component/CounterUp'
 const Home = () => {
     return (
         <div>
-            <Navber />
             <Hero />
             <SlidePart />
             <AboutUs />
@@ -20,7 +19,6 @@ const Home = () => {
             <WorkPart />
             <HappyClint />
             <CounterUp />
-            <Footer />
         </div>
     )
 }

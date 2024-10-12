@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "../Common/Card";
 import Container from "./Container";
+import OrgContext from "../Context/OrgContext";
+import { Link } from "react-router-dom";
 
 const Properties = () => {
+
+  const { product, filterProduct } = useContext(OrgContext)
+
   return (
     <div className="py-[100px]">
       <Container>
@@ -41,12 +46,15 @@ const Properties = () => {
         </div>
         {/* all card */}
         <div className="pt-10 flex items-center justify-between flex-wrap gap-y-8">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {
+            product.map((el) => {
+              return (
+                <Link key={el.id}>
+                  <Card item={el} />
+                </Link>
+              )
+            })
+          }
         </div>
       </Container>
     </div>
