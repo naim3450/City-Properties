@@ -1,22 +1,31 @@
 import React from 'react'
-import WorkPart from '../Component/WorkPart'
-import HappyClint from '../Component/HappyClint'
 import Navber from '../Component/Navber'
 import Hero from '../Component/Hero'
+import SlidePart from '../Component/SlidePart'
+import AboutUs from '../Component/AboutUs'
+import WorkPart from '../Component/WorkPart'
+import HappyClint from '../Component/HappyClint'
+import Footer from "../Component/Footer"
+
+
+ 
+import Properties from '../Component/Properties'
 
 const Home = () => {
     return (
         <>
-           
-            <Navber /> 
-            <Hero /> 
 
+            <Navber />
+            <Hero />
+            <SlidePart />
+            <AboutUs />
+            <Properties />
             <WorkPart />
             <HappyClint />
-
-
+          
+            <Footer />
         </>
     )
 }
 
-export default Home
+export default Home;

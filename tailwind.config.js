@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         blue: '#425CEC',
-        title: "#292929"
+        title: "#292929",
+        prh: "#6A6A6A"
       },
       fontFamily: {
 

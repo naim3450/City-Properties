@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+option::marker {
+    content: '';
+}
+
+.spanLine {
+    position: relative;
+}
+
+.spanLine::before {
+    position: absolute;
+    content: '';
+    height: 73px;
+    width: 1px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.clhid::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+
+.clhid::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+.insetShadow {
+    box-shadow: inset -5px 2px 10px rgb(163, 163, 163);
+}
