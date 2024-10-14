@@ -1,16 +1,16 @@
 import React from "react";
-import img from "../../assets/1.png";
-import locationIcon from "../../assets/location.png";
-import bed from "../../assets/bed.png";
-import ft from "../../assets/ft.png";
-import bath from "../../assets/bath.png";
+import img from "../src/assets/Image/1.png";
+import locationIcon from "../src/assets/Image//location.png";
+import bed from "../src/assets/Image/bed.png";
+import ft from "../src/assets/Image/ft.png";
+import bath from "../src/assets/Image/bath.png";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import userImg from "../../assets/user.png";
+import userImg from "../src/assets/Image/user.png";
 
 const Card = () => {
   return (
-    <div className="max-w-[370px] p-5 rounded-[10px] shadow-md">
+    <div className="w-[200px] bg-red-700 p-7 rounded-[10px] shadow-md">
       {/* img */}
       <div className="h-[200px] w-full rounded-[10px] overflow-hidden">
         <img src={img} alt={img} className="w-full h-full" />
