@@ -9,6 +9,7 @@ const CounterUpCard = ({ item }) => {
 
 
     gsap.registerPlugin(ScrollTrigger)
+
     let [printNum, setprintNum] = useState(1)
 
     useEffect(() => {
@@ -19,14 +20,14 @@ const CounterUpCard = ({ item }) => {
                         clearInterval()
                     }
                     if (printNum <= num) {
-                        setprintNum(printNum += num >= 1000000000 ? 1500000 : 200 && num >= 1000000 ? 50000 : 200 && num >= 100000 ? 200 : 50)
+                        setprintNum(printNum += num >= 1000000000 ? 2500000 : 200 && num >= 1000000 ? 50000 : 200 && num >= 100000 ? 200 : 50)
                     }
                 }, printNum / 1000);
             },
             scrollTrigger: {
                 trigger: '.counter',
                 scroller: 'body',
-                start: 'top 70%'
+                start: 'top 40%',
             }
         })
     }, [])

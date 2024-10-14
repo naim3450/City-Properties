@@ -49,7 +49,7 @@ const Properties = () => {
           {
             product.map((el) => {
               return (
-                <Link key={el.id}>
+                <Link to={`/product/${el.id}`} key={el.id}>
                   <Card item={el} />
                 </Link>
               )

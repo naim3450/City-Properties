@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import RoutLayout from './Component/RoutLayout';
 import SinglePage from './Layout/SinglePage';
+import AddToCard from './Layout/AddToCard';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       <Route>
         <Route path='/' element={<RoutLayout />}>
           <Route path='/' element={<Home />} />
-          {/* <Route path='/product:id' element={<SinglePage />} /> */}
+          <Route path='/product/:id' element={<SinglePage />} />
+          <Route path='/addToCard' element={<AddToCard />} />
         </Route>
       </Route>
     )

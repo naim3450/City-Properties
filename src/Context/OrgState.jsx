@@ -53,37 +53,33 @@ const OrgState = ({ children }) => {
     }, [])
 
 
-    // const getSingleProduct = async (url) => {
-    //     const res = await axios.get(url)
-    //     const recive = await res.data
+    const getSingleProduct = async (url) => {
+        const res = await axios.get(url)
+        const recive = await res.data
 
-    //     const singleProduct = recive.products
+        try {
+            dispatch({
+                type: "Single_resOk",
+                payload: recive
+            })
+        }
+        catch (error) {
+            dispatch({
+                type: "Single_error",
+                payload: recive
+            })
+        }
+        finally {
+            dispatch({
+                type: "Single_loading",
+                payload: recive
+            })
+        }
 
-    //     console.log(url);
-
-    //     try {
-    //         dispatch({
-    //             type: "Single_resOk",
-    //             payload: singleProduct
-    //         })
-    //     }
-    //     catch (error) {
-    //         dispatch({
-    //             type: "Single_error",
-    //             payload: singleProduct
-    //         })
-    //     }
-    //     finally {
-    //         dispatch({
-    //             type: "Single_loading",
-    //             payload: singleProduct
-    //         })
-    //     }
-
-    // }
+    }
 
     return (
-        <OrgContext.Provider value={{ ...state, }}>
+        <OrgContext.Provider value={{ ...state, getSingleProduct }}>
             {children}
         </OrgContext.Provider >
     )
