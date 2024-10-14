@@ -11,8 +11,8 @@ import LPM from './LPM'
 import Property from '../../Property.json'
 import Price from '../../Price.json'
 import Country from '../../Country.json'
-import { RiArrowDownSLine } from "react-icons/ri";
-import { RiArrowUpSLine } from "react-icons/ri";
+import { MdOutlineRadioButtonChecked } from "react-icons/md";
+
 
 
 
@@ -55,8 +55,8 @@ const Hero = () => {
                         btnList.map((item, idx) => {
                             return (
                                 <button onClick={() => setactiv(idx)} key={idx}
-                                    className={`${activ === idx ? `bg-blue text-white` : `bg-[#EDEFFE] text-blue`} w-[125px] h-[70px] bg-[#EDEFFE] text-blue rounded-t-lg font-Nunito font-semibold text-5`}>
-                                    {item}
+                                    className={`${activ === idx ? `bg-blue text-white` : `bg-[#EDEFFE] text-blue`} w-[125px] h-[70px] bg-[#EDEFFE] text-blue rounded-t-lg font-Nunito font-semibold text-5 flex items-center justify-center`}>
+                                    {activ == idx ? <MdOutlineRadioButtonChecked className='mr-[3px]' /> : false}{item}
                                 </button>
                             )
                         })

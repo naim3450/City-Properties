@@ -11,7 +11,6 @@ const LMP_Card = ({ lmpdata, loadName, title }) => {
     const liClick = (name) => {
         setcntName(name)
         setfirst(false)
-        console.log(name);
     }
 
     return (
@@ -33,7 +32,6 @@ const LMP_Card = ({ lmpdata, loadName, title }) => {
                 first ?
                     <div className="parent">
                         <div className="clhid h-[15vw] w-[208px] overflow-auto overflow-x-hidden bg-white border-[1px] border-gray-400 rounded-md absolute top-[100px] inline-block shadow-xl py-[10px]">
-
                             {
                                 lmpdata.map((item, idx) => {
                                     return (

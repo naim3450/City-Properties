@@ -9,28 +9,28 @@ import Badge3 from '../assets/Image/Badge3.png'
 
 
 const CounterUp = () => {
-    
+
     let count = [
         {
-            num: 34,
+            num: 34000000,
             img: Badge,
             dtl: "Money In & Out",
             amountTyp: "M"
         },
         {
-            num: 208,
+            num: 208000,
             img: Badge1,
             dtl: "Total Host of Homey",
             amountTyp: "K"
         },
         {
-            num: 31,
+            num: 31000,
             img: Badge2,
             dtl: "Total happy Customer",
             amountTyp: "K"
         },
         {
-            num: 3,
+            num: 3000000000,
             img: Badge3,
             dtl: "Total Host of Homey",
             amountTyp: "B+"
