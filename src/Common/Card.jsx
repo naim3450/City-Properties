@@ -1,19 +1,24 @@
-import React from "react";
-import img from "../src/assets/Image/1.png";
-import locationIcon from "../src/assets/Image//location.png";
-import bed from "../src/assets/Image/bed.png";
-import ft from "../src/assets/Image/ft.png";
-import bath from "../src/assets/Image/bath.png";
+import React, { useState } from "react";
+import img from "../assets/Image/1.png";
+import locationIcon from "../assets/Image/location.png";
+import bed from "../assets/Image/bed.png";
+import ft from "../assets/Image/ft.png";
+import bath from "../assets/Image/bath.png";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import userImg from "../src/assets/Image/user.png";
+import userImg from "../assets/Image/user.png";
 
-const Card = () => {
+const Card = ({ image }) => {
+  const [show, setshow] = useState(false);
+
+  const HandleMore = () => {
+    setshow(!show);
+  };
   return (
-    <div className="w-[200px] bg-red-700 p-7 rounded-[10px] shadow-md">
+    <div className="max-w-[370px] p-5 rounded-[10px] shadow-md">
       {/* img */}
       <div className="h-[200px] w-full rounded-[10px] overflow-hidden">
-        <img src={img} alt={img} className="w-full h-full" />
+        <img src={image ? image : img} alt={image} className="w-full h-full" />
       </div>
       {/* content */}
 
@@ -31,9 +36,15 @@ const Card = () => {
       </h5>
       <p className="font-NunitoSans font-normal text-base text-thirdColor">
         Beautiful, updated, ground level co-oprative apartment in the desirable
-        Bay Terrace neighborhood ...
-        <span className="font-bold text-secondaryColor max-w-[300px] cursor-pointer">
-          More
+        Bay Terrace neighborhood{show ? "" : "..."}
+        {show
+          ? " Beautiful, updated, ground level co-oprative apartment in the desirable Bay Terrace neighborhood"
+          : ""}
+        <span
+          onClick={HandleMore}
+          className="font-bold pl-2 text-blue text-secondaryColor max-w-[300px] cursor-pointer"
+        >
+          {show ? "Less" : "More"}
         </span>
       </p>
       {/* features */}
@@ -56,7 +67,7 @@ const Card = () => {
             250.00 ft
           </span>
         </div>
-        <button className="font-NunitoSans font-normal text-base text-white  bg-secondaryColor py-[2px] px-2 rounded-md">
+        <button className="font-NunitoSans font-normal text-base text-white  bg-blue py-[2px] px-2 rounded-md">
           Details
         </button>
       </div>

@@ -10,6 +10,7 @@ import Ellipse5 from "../assets/Image/Ellipse5.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { RiArrowUpSLine } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
+import axios from "axios";
 
 const Hero = () => {
   const btnList = ["Buy", "Sell", "Rent"];
