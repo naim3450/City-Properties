@@ -7,7 +7,7 @@ import { FaGoogle, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import List from './List'
 const Footer = () => {
     return (
-        <section className='mt-[150px] mb-[120px]'>
+        <section className='mt-[90px] mb-[120px]'>
             <Container>
                 <div className='flex gap-x-[160px]'>
                     <div className="w-[265px]">

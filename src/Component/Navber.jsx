@@ -5,7 +5,28 @@ import List from './List'
 
 const Navber = () => {
 
-    let menu = ["Home", "Properties", "Agents", "Blog", "Contact"]
+    let menu = [
+        {
+            name: "Home",
+            path: "#",
+        },
+        {
+            name: "Properties",
+            path: "#",
+        },
+        {
+            name: "Agents",
+            path: "#",
+        },
+        {
+            name: "Blog",
+            path: "#",
+        },
+        {
+            name: "Contact",
+            path: "/contact",
+        }
+    ]
 
     return (
         <div>
@@ -17,7 +38,7 @@ const Navber = () => {
                         {
                             menu.map((el, idx) => {
                                 return (
-                                    <List key={idx} text={el} />
+                                    <List key={idx} text={el.name} to={el.path} />
                                 )
                             })
                         }

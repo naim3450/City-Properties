@@ -8,6 +8,7 @@ import HappyClint from '../Component/HappyClint'
 import Footer from '../Component/Footer'
 import Properties from '../Component/Properties'
 import CounterUp from '../Component/CounterUp'
+import Contact from '../Component/Contact'
 
 const Home = () => {
     return (

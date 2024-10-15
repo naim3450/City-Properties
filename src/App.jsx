@@ -11,6 +11,7 @@ import {
 import RoutLayout from './Component/RoutLayout';
 import SinglePage from './Layout/SinglePage';
 import AddToCard from './Layout/AddToCard';
+import Contact from './Component/Contact';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/product/:id' element={<SinglePage />} />
           <Route path='/addToCard' element={<AddToCard />} />
+          <Route path='/contact' element={<Contact />} />
         </Route>
       </Route>
     )
