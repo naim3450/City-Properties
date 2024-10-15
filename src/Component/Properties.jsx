@@ -2,6 +2,7 @@ import { React, useContext } from "react";
 import Card from "../Common/Card";
 import Container from "./Container";
 import OrgContext from "../Context/OrgContext";
+import { Link } from "react-router-dom";
 
 const Properties = () => {
   const { product, filterProduct } = useContext(OrgContext);
@@ -43,12 +44,12 @@ const Properties = () => {
           </ul>
         </div>
         {/* all card */}
-        <div className="pt-10 flex  justify-between flex-wrap gap-y-8">
-          {product?.slice(0, 6).map((item, index) => {
+        <div className="pt-10 flex items-center justify-between flex-wrap gap-y-8">
+          {product.map((el) => {
             return (
-              <div key={index}>
-                <Card image={item.thumbnail} />
-              </div>
+              <Link key={el.id}>
+                <Card item={el} />
+              </Link>
             );
           })}
         </div>

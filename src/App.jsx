@@ -20,8 +20,8 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route path="/" element={<RoutLayout />}>
-          <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/agents" element={<Agents />} />
           <Route path="/product:id" element={<SinglePage />} />
           <Route path="/*" element={<Error />} />

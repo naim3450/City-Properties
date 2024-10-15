@@ -24,7 +24,6 @@ export const reducer = (state, action) => {
     if (action.type == "Single_resOk") {
         return {
             ...state,
-            isLoading: false,
             singleProduct: action.payload,
         }
     }
