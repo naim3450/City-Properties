@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import Home from './Layout/Home'
-import Loader from './Component/Loader'
-import OrgContext from './Context/OrgContext'
+import React, { useContext } from "react";
+import Home from "./Layout/Home";
+import Loader from "./Component/Loader";
+import OrgContext from "./Context/OrgContext";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -11,35 +11,36 @@ import {
 import RoutLayout from './Component/RoutLayout';
 import SinglePage from './Layout/SinglePage';
 import AddToCard from './Layout/AddToCard';
-import Contact from './Component/Contact';
+import Agents from "./Layout/Agents";
+import Contact from "./Component/Contact";
 
 
 function App() {
-
-  const { isLoading } = useContext(OrgContext)
+  const { isLoading } = useContext(OrgContext);
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
         <Route path='/' element={<RoutLayout />}>
           <Route path='/' element={<Home />} />
+          <Route path='/agent' element={<Agents />} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='/product/:id' element={<SinglePage />} />
           <Route path='/addToCard' element={<AddToCard />} />
-          <Route path='/contact' element={<Contact />} />
         </Route>
       </Route>
     )
-  )
+  );
 
   if (isLoading == true) {
-    return <Loader />
+    return <Loader />;
   }
 
   return (
     <>
       <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

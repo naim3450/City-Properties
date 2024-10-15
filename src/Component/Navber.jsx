@@ -8,7 +8,7 @@ const Navber = () => {
     let menu = [
         {
             name: "Home",
-            path: "#",
+            path: "/",
         },
         {
             name: "Properties",
@@ -16,7 +16,7 @@ const Navber = () => {
         },
         {
             name: "Agents",
-            path: "#",
+            path: "/agent",
         },
         {
             name: "Blog",
