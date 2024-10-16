@@ -11,7 +11,6 @@ import {
 import RoutLayout from './Component/RoutLayout';
 import SinglePage from './Layout/SinglePage';
 
-
 function App() {
 
   const { isLoading } = useContext(OrgContext)
