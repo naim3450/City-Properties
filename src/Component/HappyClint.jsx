@@ -8,7 +8,6 @@ import Clint_four from '../assets/Image/clint_four.png'
 import Clint_five from '../assets/Image/clint_five.png'
 import Clint_six from '../assets/Image/clint_six.png'
 import Clint_seven from '../assets/Image/clint_seven.png'
-import CounterUp from './CounterUp'
 
 const HappyClint = () => {
     return (

@@ -1,11 +1,12 @@
 import React from "react";
+import Container from "./Container";
 
 const Subscribe = () => {
   return (
-    <div className="py-[100px]">
-      <div className="container">
+    <div className="pt-[100px]">
+      <Container>
         <div className="bg-blue py-[100px] rounded-2xl flex-col flex items-center justify-center text-center">
-          <h3 className="text-[40px] font-bold text-white font-Nunito max-w-[815px] leading-[60px]">
+          <h3 className="text-[40px] font-bold text-white font-NunitoSans max-w-[815px] leading-[60px]">
             Sign Up Now to see Newest Update about Real Estate from Entire the
             World
           </h3>
@@ -25,7 +26,7 @@ const Subscribe = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
