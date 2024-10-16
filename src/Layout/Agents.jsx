@@ -121,41 +121,41 @@ const Agents = () => {
                   fill="none"
                   stroke="#3e33e1"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
                     <defs>
                       <style>.cls-1</style>
                     </defs>
                     <polyline
-                      class="cls-1"
+                      className="cls-1"
                       points="20.59 8.18 20.59 22.5 3.41 22.5 3.41 8.18"
                     ></polyline>
                     <line
-                      class="cls-1"
+                      className="cls-1"
                       x1="0.55"
                       y1="22.5"
                       x2="23.45"
                       y2="22.5"
                     ></line>
                     <polyline
-                      class="cls-1"
+                      className="cls-1"
                       points="0.55 11.04 12 1.5 23.45 11.04"
                     ></polyline>
                     <rect
-                      class="cls-1"
+                      className="cls-1"
                       x="9.14"
                       y="14.86"
                       width="5.73"
                       height="7.64"
                     ></rect>
-                    <circle class="cls-1" cx="12" cy="9.14" r="1.91"></circle>
+                    <circle className="cls-1" cx="12" cy="9.14" r="1.91"></circle>
                     <polyline
-                      class="cls-1"
+                      className="cls-1"
                       points="16.77 5.48 16.77 1.5 20.59 1.5 20.59 8.66"
                     ></polyline>
                   </g>
@@ -182,15 +182,15 @@ const Agents = () => {
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 490.034 490.034"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  enable-background="new 0 0 490.034 490.034"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  enableBackground="new 0 0 490.034 490.034"
                   fill="none"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
                     {" "}

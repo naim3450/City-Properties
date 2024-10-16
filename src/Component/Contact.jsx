@@ -31,7 +31,7 @@ const Contact = () => {
                 </div>
 
                 <div className="w-[55%] bg-[#FFF] shadow-2xl rounded-lg">
-                    <form class=" shadow-md rounded-lg p-8 flex flex-col gap-3 ">
+                    <form className=" shadow-md rounded-lg p-8 flex flex-col gap-3 ">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>

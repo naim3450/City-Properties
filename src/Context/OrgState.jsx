@@ -7,49 +7,84 @@ const initialState = {
   isLoading: true,
   product: [],
   filterProduct: [],
-  singleProduct: [],
-  isLoadingSingle: true,
-  isError: false,
+
+  // singleProduct: [],
+  // isLoadingSingle: true,
+  // isError: false,
 };
 
 const OrgState = ({ children }) => {
+
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function fetchProducts() {
     let api = fetch("https://dummyjson.com/product");
 
-    api
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok " + res.statusText);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        const product = data.products;
+    api.then((res) => {
+      return res.json()
+    }).then((recive) => {
+      const data = recive.products
 
-        try {
-          dispatch({
-            type: "resOk",
-            payload: product,
-          });
-        } catch (error) {
-          dispatch({
-            type: "error",
-            payload: product,
-          });
-        } finally {
-          dispatch({
-            type: "loading",
-            payload: product,
-          });
-        }
-      });
+      try {
+        dispatch({
+          type: "isOk",
+          payload: data
+        })
+      }
+      catch (error) {
+        dispatch({
+          type: "isError",
+          payload: data
+        })
+      }
+      finally {
+        dispatch({
+          type: "isLoading",
+          payload: data
+        })
+      }
+    })
+
+    // api
+    //   .then((res) => {
+    //     if (!res.ok) {
+    //       throw new Error("Network response was not ok " + res.statusText);
+    //     }
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     const product = data.products;
+
+    //     try {
+    //       dispatch({
+    //         type: "resOk",
+    //         payload: product,
+    //       });
+    //     } catch (error) {
+    //       dispatch({
+    //         type: "error",
+    //         payload: product,
+    //       });
+    //     } finally {
+    //       dispatch({
+    //         type: "loading",
+    //         payload: product,
+    //       });
+    //     }
+    //   });
   }
 
+
+
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    fetchProducts()
+  }, [])
+
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
+
 
   // const getSingleProduct = async (url) => {
   //     const res = await axios.get(url)

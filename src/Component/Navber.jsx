@@ -20,7 +20,7 @@ const Navber = () => {
         },
         {
             name: "Blog",
-            path: "#",
+            path: "/blog",
         },
         {
             name: "Contact",

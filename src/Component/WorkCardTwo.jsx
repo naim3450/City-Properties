@@ -11,7 +11,7 @@ const WorkCardTwo = ({ src, className, h3text, atext, ptext }) => {
                 <h3 className={`text-Nunito font-bold leading-6 text-xl pl-9 pt-10 ${className}`}>{h3text}</h3>
                 <GoDash className='h-10 w-10 text-blue ml-9' />
                 <p className={`w-[460px] text-base font-Nunito leading-6 font-normal ml-9 mb-8 ${className}`}>{ptext}</p>
-                <a href="#" className={`text-blue font-Nunito font-bold text-base leading-6 pl-8  ${className}`}>{atext}</a>
+                <a href="#" className={`text-blue font-Nunito font-bold text-base leading-6 pl-8  ${className}`}>{atext} </a>
             </div>
         </div>
     )

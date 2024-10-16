@@ -13,17 +13,17 @@ import SinglePage from './Layout/SinglePage';
 import AddToCard from './Layout/AddToCard';
 import Agents from "./Layout/Agents";
 import Contact from "./Component/Contact";
+import BlogPage from "./page/BlogPage";
 
 
 function App() {
-  const { isLoading } = useContext(OrgContext);
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
         <Route path='/' element={<RoutLayout />}>
           <Route path='/' element={<Home />} />
           <Route path='/agent' element={<Agents />} />
+          <Route path='/blog' element={<BlogPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/product/:id' element={<SinglePage />} />
           <Route path='/addToCard' element={<AddToCard />} />
@@ -31,6 +31,8 @@ function App() {
       </Route>
     )
   );
+
+  const { isLoading } = useContext(OrgContext)
 
   if (isLoading == true) {
     return <Loader />;
