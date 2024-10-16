@@ -8,6 +8,7 @@ import HappyClint from '../Component/HappyClint'
 import Footer from '../Component/Footer'
 import Properties from '../Component/Properties'
 import CounterUp from '../Component/CounterUp'
+import PropertyPage from '../Component/PropertyPage'
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <WorkPart />
             <HappyClint />
             <CounterUp />
+            <PropertyPage/>
         </div>
     )
 }
