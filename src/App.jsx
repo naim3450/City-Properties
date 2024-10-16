@@ -12,6 +12,9 @@ import RoutLayout from "./Component/RoutLayout";
 import SinglePage from "./Layout/SinglePage";
 import Agents from "./Layout/Agents";
 import Error from "./Component/Error";
+import Properties from "./Component/Properties";
+import BlogPage from "./page/BlogPage";
+
 
 function App() {
   const { isLoading } = useContext(OrgContext);
@@ -21,9 +24,12 @@ function App() {
       <Route>
         <Route path="/" element={<RoutLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/Properties" element={<Properties/>} />
           <Route path="/home" element={<Home />} />
           <Route path="/agents" element={<Agents />} />
-          <Route path="/product:id" element={<SinglePage />} />
+          <Route path="/Blog" element={<BlogPage />} />
+         
+          {/* <Route path="/product:id" element={<SinglePage />} /> */}
           <Route path="/*" element={<Error />} />
         </Route>
       </Route>
