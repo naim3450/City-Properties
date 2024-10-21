@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '../assets/Image/footlogo.png'
 import Container from './Container'
 import List from './List'
+import { Link } from 'react-router-dom'
+import { BsCartPlusFill } from "react-icons/bs";
+import OrgContext from '../Context/OrgContext'
+
+
 
 const Navber = () => {
 
@@ -12,11 +17,11 @@ const Navber = () => {
         },
         {
             name: "Properties",
-            path: "#",
+            path: "/Properties",
         },
         {
             name: "Agents",
-            path: "/agent",
+            path: "/agents",
         },
         {
             name: "Blog",
@@ -27,6 +32,9 @@ const Navber = () => {
             path: "/contact",
         }
     ]
+
+    const { cart } = useContext(OrgContext)
+    
 
     return (
         <div>
@@ -44,12 +52,54 @@ const Navber = () => {
                         }
                     </ul>
 
-                    <button className='text-[#FFFF] text-base w-[150px] h-[56px] bg-blue font-Nunito font-bold rounded-[30px]'>
-                        Log In
-                    </button>
-                </div>
-            </Container>
-        </div>
+
+
+                    <div className="flex gap-3 items-center">
+                        <Link to={`/addToFavourite`}>
+
+                            <div className="bg-blue text-white py-2 px-5 flex items-center font-Nunito font-semibold gap-2 rounded-md">
+                                <BsCartPlusFill className='text-[20px]' />
+                                <p>{cart.length}</p>
+                            </div>
+
+                        </Link>
+
+                        <Link to={`/login`}>
+                            <button className='text-[#FFFF] text-base w-[150px] h-[56px] bg-blue font-Nunito font-bold rounded-[30px]'>
+                                Log In
+                            </button>
+                        </Link>
+                    </div>
+
+
+
+                    {/* <div className="flex gap-3 items-center">
+                        <Link Link to={`/addToFavourite`}>
+
+                            <div className="bg-blue text-white py-2 px-5 flex items-center font-Nunito font-semibold gap-2 rounded-md">
+                                <BsCartPlusFill className='text-[20px]' />
+                                <p>{cart.length}</p>
+                            </div>
+
+                        </Link>
+
+                        <button onClick={logOut} className="bg-blue text-white py-2 px-5 flex items-center font-Nunito font-semibold gap-2 rounded-md">
+                            <span>Log Out</span>
+                            <CiLogin className='text-[20px]' />
+                        </button>
+                    </div>
+
+                    <Link to={`/login`}>
+                        <button className='text-[#FFFF] text-base w-[150px] h-[56px] bg-blue font-Nunito font-bold rounded-[30px]'>
+                            Log In
+                        </button>
+                    </Link> */}
+
+
+
+                </div >
+            </Container >
+        </div >
     )
 }
 

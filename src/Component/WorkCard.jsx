@@ -7,7 +7,9 @@ const WorkCard = ({ src, className, h3text, num, atext, ptext }) => {
     <div className=' w-[360px] pt-5 bg-white shadow-2xl rounded-lg'>
       <div className="relative">
         <Image src={src} className={`w-[330px] h-[230px] ml-4 rounded-xl`} />
-        <div className='h-12 w-12 bg-blue absolute bottom-[-20px] left-16 rounded-xl shadow-lg text-white font-semibold text-[25px] text-center'>{num}</div>
+        <div className='h-12 w-12 bg-blue absolute bottom-[-20px] leading-0 left-10 rounded-md shadow-lg text-white'>
+          <p className=' h-full flex items-center justify-center text-[22px] font-semibold'>{num}</p>
+        </div>
       </div>
       <div className="pb-10">
 

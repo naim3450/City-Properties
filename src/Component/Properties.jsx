@@ -1,15 +1,19 @@
-import { React, useContext } from "react";
+import { React, useContext, useState } from "react";
 import Card from "../Common/Card";
 import Container from "./Container";
 import OrgContext from "../Context/OrgContext";
-import { Link } from "react-router-dom";
 
 const Properties = () => {
 
-  const { product } = useContext(OrgContext)
+  const { product, handelCategory } = useContext(OrgContext)
 
 
-  // console.log(product)
+  const [active, setactive] = useState("Apartments")
+
+  const activeAndCategory = (item) => {
+    setactive(item)
+    handelCategory(item)
+  }
 
   return (
     <div className="py-[100px]">
@@ -33,28 +37,23 @@ const Properties = () => {
         {/* all tabs */}
         <div className="flex items-center justify-end">
           <ul className="flex items-center gap-x-10">
-            {["properties", "Houses", "Apartments", "Sales"].map(
+            {["Apartments", "Houses", "Rentals", "Sales"].map(
               (item, index) => (
-                <li key={index}>
-                  <a
-                    className="font-Nunito hover:text-secondaryColor transition-all font-bold text-xl text-primaryColor capitalize"
-                    href="#"
-                  >
-                    {item}
-                  </a>
+                <li key={index} onClick={() => activeAndCategory(item)}
+                  className={`font-Nunito font-bold text-xl text-primaryColor capitalize cursor-pointer ${active == item ? "text-blue" : "text-title"}`}>
+
+                  {item}
                 </li>
               )
             )}
           </ul>
         </div>
         {/* all card */}
-        <div className="pt-10 flex justify-between flex-wrap gap-y-8">
+        <div className="pt-10 grid grid-cols-3 justify-between">
           {
-            product.slice(0, 6).map((el) => {
+            product.map((el) => {
               return (
-                <Link key={el.id}>
-                  <Card item={el} />
-                </Link>
+                <Card item={el} key={el.id} />
               )
             })
           }

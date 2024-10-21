@@ -37,13 +37,13 @@ const LMP_Card = ({ lmpdata, loadName, title }) => {
 
       {first ? (
         <div className="parent">
-          <div className="clhid h-[15vw] w-[208px] overflow-auto overflow-x-hidden bg-white border-[1px] border-gray-400 rounded-md absolute top-[100px] inline-block shadow-xl py-[10px]">
+          <div className="clhid h-[15vw] w-[208px] overflow-auto overflow-x-hidden bg-white border-[1px] border-gray-400 rounded-md absolute top-[80px] inline-block shadow-xl py-[10px]">
             {lmpdata.map((item, idx) => {
               return (
                 <li
                   key={idx}
                   onClick={() => liClick(item.name || item)}
-                  className="py-[8px] font-Nunito pl-[30px] list-none border-b-[2px] border-blue border-opacity-[40%] cursor-pointer hover:bg-gray-400"
+                  className="py-[8px] font-Nunito pl-[30px] list-none border-b-[1px] border-gray-500 border-opacity-[40%] cursor-pointer hover:bg-gray-400"
                 >
                   {item.name || item}
                 </li>

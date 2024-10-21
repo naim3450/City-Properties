@@ -26,8 +26,8 @@ const CounterUpCard = ({ item }) => {
             },
             scrollTrigger: {
                 trigger: '.counter',
-                scroller: 'body',
-                start: 'top 40%',
+                // scroller: 'body',
+                start: 'top 80%',
             }
         })
     }, [])

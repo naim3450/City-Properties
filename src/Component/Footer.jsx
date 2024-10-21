@@ -14,16 +14,16 @@ const Footer = () => {
                         <Image src={Logo} className='top-0' />
                         <p className="text-[16px] text-paraColor pt-[28px] pr-10">Build a modern and creative website with crealand</p>
                         <div className='flex mt-[35px] gap-x-2'>
-                            <button type='#' className="border p-2 rounded-full bg-gray-400">
+                            <button type='#' className="p-2 rounded-full text-gray-600 bg-[#EFF1F3]">
                                 <FaGoogle className='text-[20px] text-paraColor' />
                             </button>
-                            <button type='#' className="border p-2 rounded-full bg-gray-400">
+                            <button type='#' className="p-2 rounded-full text-gray-600 bg-[#EFF1F3]">
                                 <FaTwitter className='text-[20px] text-paraColor' />
                             </button>
-                            <button type='#' className="border p-2 rounded-full bg-gray-400">
+                            <button type='#' className="p-2 rounded-full text-gray-600 bg-[#EFF1F3]">
                                 <FaInstagram className='text-[20px] text-paraColor' />
                             </button>
-                            <button type='#' className="border p-2 rounded-full bg-gray-400">
+                            <button type='#' className="p-2 rounded-full text-gray-600 bg-[#EFF1F3]">
                                 <FaLinkedin className='text-[20px] text-paraColor' />
                             </button>
 

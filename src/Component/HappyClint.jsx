@@ -11,7 +11,7 @@ import Clint_seven from '../assets/Image/clint_seven.png'
 
 const HappyClint = () => {
     return (
-        <section className='bg-[#f6f7fe] py-[200px]'>
+        <section className='bg-[#f6f7fe]  pt-[80px] pb-[220px]'>
             <Container>
                 <h3 className='font-Nunito text-[40px] leading-10 text-title font-bold text-center pt-20'>
                     Our Happy Client Says

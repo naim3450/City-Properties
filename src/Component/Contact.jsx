@@ -13,7 +13,7 @@ const Contact = () => {
             <Container className={`flex justify-between p-[75px] bg-[#dee2fc] rounded-2xl mt-[30px]`}>
 
                 <div className="w-[45%] flex flex-col justify-center">
-                    <h2 class="text-4xl font-bold font-Nunito mb-6 text-left text-black">Contact Us</h2>
+                    <h2 className="text-4xl font-bold font-Nunito mb-6 text-left text-black">Contact Us</h2>
                     <p className='pr-[40px] font-Nunito text-[18px] text-black' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolore similique maiores ratione voluptatum suscipit nam nostrum distinctio iure vitae temporibus?</p>
 
                     <div className="flex gap-7 mt-[35px]">
@@ -33,30 +33,30 @@ const Contact = () => {
                 <div className="w-[55%] bg-[#FFF] shadow-2xl rounded-lg">
                     <form className=" shadow-md rounded-lg p-8 flex flex-col gap-3 ">
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-black">First Name</label>
+                                <label htmlFor="name" className="block text-sm font-medium text-black">First Name</label>
                                 <input
-                                    type="text" id="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm outline-blue py-2 pl-3 italic" placeholder='First Name' />
+                                    type="text" id="name" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm outline-blue py-2 pl-3 italic" placeholder='First Name' />
                             </div>
                             <div>
-                                <label for="name" class="block text-sm font-medium text-black">Last Name</label>
-                                <input type="name" id="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm outline-blue py-2 pl-3 italic" placeholder='Last Name' />
+                                <label htmlFor="name" className="block text-sm font-medium text-black">Last Name</label>
+                                <input type="name" id="name" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm outline-blue py-2 pl-3 italic" placeholder='Last Name' />
                             </div>
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-medium text-black">Email</label>
-                            <input type="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm outline-blue py-2 pl-3 italic" placeholder='Your Email' />
+                            <label htmlFor="email" className="block text-sm font-medium text-black">Email</label>
+                            <input type="email" id="email" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm outline-blue py-2 pl-3 italic" placeholder='Your Email' />
                         </div>
 
-                        <div class="mt-6">
-                            <label for="message" class="block text-sm font-medium text-black">Message</label>
-                            <textarea placeholder='Your message here' id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm  outline-blue py-2 pl-3 italic" ></textarea>
+                        <div className="mt-6">
+                            <label htmlFor="message" className="block text-sm font-medium text-black">Message</label>
+                            <textarea placeholder='Your message here' id="message" rows="4" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm  outline-blue py-2 pl-3 italic" ></textarea>
                         </div>
 
-                        <div class="mt-6 bg-blue rounded-md border-[2px] border-gray-300">
-                            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700">Send Message</button>
+                        <div className="mt-6 bg-blue rounded-md border-[2px] border-gray-300">
+                            <button type="submit" className="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700">Send Message</button>
                         </div>
                     </form>
                 </div>

@@ -2,77 +2,72 @@ import React, { useReducer, useEffect } from "react";
 import OrgContext from "./OrgContext";
 import { reducer } from "./reducer";
 import axios from "axios";
+import product1 from '../assets/Image/product1.png'
+import product2 from '../assets/Image/product2.png'
+import product3 from '../assets/Image/product3.png'
+import product4 from '../assets/Image/product4.png'
+import product5 from '../assets/Image/product5.png'
+import product6 from '../assets/Image/product6.png'
+import api from '../../api.json'
+
+// For localStore Get Part Start
+const getLocalStore = () => {
+  const localStorageData = localStorage.getItem("City-Properties")
+  if (localStorageData) {
+    return JSON.parse(localStorageData)
+  }
+  else {
+    return []
+  }
+}
+
+// For localStore Get Part End
+// For localStore Get Part Start
+const getHeartLocal = () => {
+  const localStorageData = localStorage.getItem("heartData")
+  if (localStorageData) {
+    return JSON.parse(localStorageData)
+  }
+  else {
+    return []
+  }
+}
+// For localStore Get Part End
+
 
 const initialState = {
   isLoading: true,
   product: [],
   filterProduct: [],
-
-  // singleProduct: [],
-  // isLoadingSingle: true,
-  // isError: false,
+  cart: getLocalStore(),
+  heart: getHeartLocal(),
+  share: false,
 };
 
 const OrgState = ({ children }) => {
 
-
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function fetchProducts() {
-    let api = fetch("https://dummyjson.com/product");
 
-    api.then((res) => {
-      return res.json()
-    }).then((recive) => {
-      const data = recive.products
-
-      try {
-        dispatch({
-          type: "isOk",
-          payload: data
-        })
-      }
-      catch (error) {
-        dispatch({
-          type: "isError",
-          payload: data
-        })
-      }
-      finally {
-        dispatch({
-          type: "isLoading",
-          payload: data
-        })
-      }
-    })
-
-    // api
-    //   .then((res) => {
-    //     if (!res.ok) {
-    //       throw new Error("Network response was not ok " + res.statusText);
-    //     }
-    //     return res.json();
-    //   })
-    //   .then((data) => {
-    //     const product = data.products;
-
-    //     try {
-    //       dispatch({
-    //         type: "resOk",
-    //         payload: product,
-    //       });
-    //     } catch (error) {
-    //       dispatch({
-    //         type: "error",
-    //         payload: product,
-    //       });
-    //     } finally {
-    //       dispatch({
-    //         type: "loading",
-    //         payload: product,
-    //       });
-    //     }
-    //   });
+    try {
+      dispatch({
+        type: "isOk",
+        payload: api
+      })
+    }
+    catch (error) {
+      dispatch({
+        type: "isError",
+        payload: api
+      })
+    }
+    finally {
+      dispatch({
+        type: "isLoading",
+        payload: api
+      })
+    }
   }
 
 
@@ -81,42 +76,67 @@ const OrgState = ({ children }) => {
     fetchProducts()
   }, [])
 
-  // useEffect(() => {
-  //   fetchProducts();
-  // }, []);
+
+  // AddToCart Part Start
+  const AddToCart = (id) => {
+    dispatch({
+      type: "addToCart",
+      payload: id
+    })
+  }
+
+  // AddToCart Part End
+
+  // removeCart Part Start
+  const remove = (id) => {
+    dispatch({
+      type: "removeCart",
+      payload: id
+    })
+  }
+  // removeCart Part End
 
 
-  // const getSingleProduct = async (url) => {
-  //     const res = await axios.get(url)
-  //     const recive = await res.data
+  // For localStore Set Part Start
+  useEffect(() => {
+    localStorage.setItem("City-Properties", JSON.stringify(state.cart))
+  }, [state.cart])
+  // For localStore Set Part End
 
-  //     const singleProduct = recive.products
+  // For localStore Set Heart Part Start
 
-  //     console.log(url);
+  useEffect(() => {
+    localStorage.setItem("heartData", JSON.stringify(state.heart))
+  }, [state.heart])
 
-  //     try {
-  //         dispatch({
-  //             type: "Single_resOk",
-  //             payload: singleProduct
-  //         })
-  //     }
-  //     catch (error) {
-  //         dispatch({
-  //             type: "Single_error",
-  //             payload: singleProduct
-  //         })
-  //     }
-  //     finally {
-  //         dispatch({
-  //             type: "Single_loading",
-  //             payload: singleProduct
-  //         })
-  //     }
+  // For localStore Set Heart Part End
 
-  // }
+
+  // share part start 
+  const shareClick = () => {
+    dispatch({
+      type: "share",
+    })
+  }
+
+  const shareClose = () => {
+    dispatch({
+      type: "shareClose",
+    })
+  }
+  // share part end 
+
+  // category part start 
+  const handelCategory = (item) => {
+    dispatch({
+      type: "category",
+      payload: item
+    })
+  }
+  // category part end 
 
   return (
-    <OrgContext.Provider value={{ ...state }}>{children}</OrgContext.Provider>
+    <OrgContext.Provider value={{ ...state, AddToCart, remove, shareClick, shareClose, handelCategory }}>{children}</OrgContext.Provider>
   );
 };
 
